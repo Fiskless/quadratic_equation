@@ -1,0 +1,15 @@
+<h1 class="m-3">Решение</h1>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            {% if x1 and x2 %}
+            <p>Корни уравнения:</p>
+            <p>Первый корень: {{ x1 }}</p>
+            <p>Второй корень: {{ x2 }}</p>
+            {% elif x1 and not x2 %}
+            <p>Уравнение имеет один корень: {{ x1 }}</p>
+            {% elif not x1 and not x2 %}
+            <p>Уравнение не имеет корней</p>
+            {% endif %}
+            <a class="nav-link" href="{% url 'get_parameters_values' %}">Решить еще одно уравнение</a>
+        </div>
+    </div>
