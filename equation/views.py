@@ -15,7 +15,7 @@ def get_parameters_values(request):
                             c=cd['parameter_c'] or 0)
     else:
         form = EquationParametersForm()
-    return render(request, 'main_page.html', {'form': form})
+    return render(request, 'solver_main.html', {'form': form})
 
 
 def get_solution(request, a, b, c):

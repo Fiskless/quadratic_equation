@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'equation',
+    'guesser',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -125,3 +127,10 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+SUBJECT_NUMBERS = [number for number in range(1, 101)]
+
+BLUE_GREEN_RED_WEIGHTS = [60, 21, 19]

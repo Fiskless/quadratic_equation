@@ -1,0 +1,13 @@
+{% load crispy_forms_tags %}
+<h1 class="m-3">Ввод исходных данных</h1>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <p>Пожалуйста, введите номер предмета</p>
+                <form action="." method="post">
+                    {{ form|crispy }}
+                    {% csrf_token %}
+                    {{ form.non_field_errors }}
+                    <p><input type="submit" name="guessing" value="Угадать цвет"></p>
+                    <p><input type="submit" name='restart' value="Начать заново"></p>
+        </div>
+    </div>
